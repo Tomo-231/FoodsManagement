@@ -1,0 +1,86 @@
+/* =========================
+   基本設定
+========================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  touch-action: manipulation;
+}
+
+/* =========================
+   全体レイアウト
+========================= */
+.app {
+  display: flex;
+  height: 100vh;
+  padding: 10px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   左側
+========================= */
+.left {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-editor {
+  display: flex;
+  gap: 4px;
+}
+
+.item-editor input {
+  flex: 1;
+  padding: 4px;
+}
+
+.item-editor button {
+  padding: 4px 8px;
+}
+
+/* リスト */
+.list {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* =========================
+   右側
+========================= */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#date {
+  padding: 4px;
+  font-size: 14px;
+}
+
+.memo {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: Consolas, monospace;
+  touch-action: pan-y;
+}
+
+/* =========================
+   フォーカス表示
+========================= */
+.list:focus,
+.memo:focus,
+#date:focus,
+.item-editor input:focus {
+  outline: 2px solid #4a90e2;
+}
