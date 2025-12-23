@@ -14,7 +14,7 @@ html, body {
 ========================= */
 .app {
   display: flex;
-  height: 100vh;
+  height: 100vh;   /* 高さを100% */
   padding: 10px;
   gap: 10px;
   box-sizing: border-box;
@@ -28,6 +28,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  height: 100%;
 }
 
 .item-editor {
@@ -45,9 +46,39 @@ html, body {
 }
 
 /* リスト */
-.list {
-  flex: 1;
-  font-size: 14px;
+.listbox {
+  flex: 1;            
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  border: 1px solid #555;
+}
+
+.listbox li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  user-select: none;
+  min-height: 48px;
+  color: #111;        /* 通常文字色 */
+}
+
+.listbox li.selected {
+  background: #2a5bd7;
+  color: #fff;
+}
+
+.listbox li .name {
+  font-size: 16px;
+  color: inherit;      /* liの色を継承 */
+}
+
+.listbox li .date {
+  font-size: 12px;
+  color: #888;
 }
 
 /* =========================
@@ -78,7 +109,7 @@ html, body {
 /* =========================
    フォーカス表示
 ========================= */
-.list:focus,
+.listbox:focus,
 .memo:focus,
 #date:focus,
 .item-editor input:focus {
