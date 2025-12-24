@@ -115,3 +115,16 @@ html, body {
 .item-editor input:focus {
   outline: 2px solid #4a90e2;
 }
+@media (max-width: 600px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+}
