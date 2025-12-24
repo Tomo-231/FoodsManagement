@@ -115,6 +115,8 @@ html, body {
 .item-editor input:focus {
   outline: 2px solid #4a90e2;
 }
+
+
 @media (max-width: 600px) {
   .app {
     flex-direction: column;
@@ -126,5 +128,18 @@ html, body {
 
   .right {
     width: 100%;
+    flex: none;
   }
+
+  .memo {
+    min-height: 200px;   /* ← ここ重要 */
+    flex: none;
+  }
+}
+
+
+.field-label {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
 }
